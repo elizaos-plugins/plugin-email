@@ -6,5 +6,10 @@ export default defineConfig({
     sourcemap: true,
     clean: true,
     format: ["esm"], // Ensure you're targeting CommonJS
-    external: ["nodemailer", "mail-notifier", "z"],
+    external: [
+        "nodemailer",
+        "mail-notifier",
+        "z",
+        "@elizaos/core",
+    ],
 });
