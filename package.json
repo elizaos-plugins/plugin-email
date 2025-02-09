@@ -1,6 +1,6 @@
 {
     "name": "@elizaos/plugin-email",
-    "version": "0.1.9",
+    "version": "0.25.6-alpha.1",
     "type": "module",
     "main": "./dist/index.js",
     "module": "dist/index.js",
@@ -15,7 +15,6 @@
         "format:fix": "biome format --write ."
     },
     "dependencies": {
-        "@elizaos/adapter-postgres": "workspace:^",
         "@elizaos/core": "workspace:^",
         "mail-notifier": "^0.5.0",
         "nodemailer": "^6.9.16"
@@ -40,5 +39,8 @@
         "ts-jest": "^29.2.5",
         "ts-jest-mock-import-meta": "^1.2.1",
         "typescript": "^5.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
