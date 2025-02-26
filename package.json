@@ -41,5 +41,76 @@
     },
     "publishConfig": {
         "access": "public"
+    },
+    "agentConfig": {
+        "pluginType": "elizaos:client:1.0.0",
+        "pluginParameters": {
+            "EMAIL_OUTGOING_SERVICE": {
+                "type": "string",
+                "minLength": 1,
+                "description": "\"smtp\" | \"gmail\"",
+                "optional": false
+            },
+            "EMAIL_OUTGOING_HOST": {
+                "type": "string",
+                "minLength": 1,
+                "description": "SMTP Hostname or IP to connect to. Required only when \"smtp\" service is configured.",
+                "optional": true
+            },
+            "EMAIL_OUTGOING_PORT": {
+                "type": "string",
+                "minLength": 1,
+                "description": "the port to connect to (defaults to 465 for secure connections, otherwise 587). Required only if \"smtp\" is configured.",
+                "optional": true
+            },
+            "EMAIL_SECURE": {
+                "type": "string",
+                "minLength": 1,
+                "description": "if true the connection will use TLS, otherwise TLS will be used if server supports STARTTLS extension. Set to true if port 465 is selected.",
+                "optional": false
+            },
+            "EMAIL_OUTGOING_USER": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Username",
+                "optional": false
+            },
+            "EMAIL_OUTGOING_PASS": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Password. If \"gmail\" selected you will need to provision a dedicated password for the agent",
+                "optional": false
+            },
+            "EMAIL_INCOMING_SERVICE": {
+                "type": "string",
+                "minLength": 1,
+                "description": "\"imap\"",
+                "optional": false
+            },
+            "EMAIL_INCOMING_HOST": {
+                "type": "string",
+                "minLength": 1,
+                "description": "IMAP Hostname or IP to connect to",
+                "optional": false
+            },
+            "EMAIL_INCOMING_PORT": {
+                "type": "string",
+                "minLength": 1,
+                "description": "the port to connect to (defaults to 993)",
+                "optional": false
+            },
+            "EMAIL_INCOMING_USER": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Username",
+                "optional": false
+            },
+            "EMAIL_INCOMING_PASS": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Password",
+                "optional": false
+            }
+        }
     }
 }
